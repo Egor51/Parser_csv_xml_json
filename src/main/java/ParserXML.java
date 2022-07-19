@@ -10,6 +10,10 @@ import java.util.List;
 
 public class ParserXML {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a3fce1f25c18933b4fb88877da5ff625e8ad1c09
     public static List<Employee> parseXML(String fileName) throws IOException, SAXException, ParserConfigurationException {
         List<Employee> staff = new ArrayList<>();
         try {
