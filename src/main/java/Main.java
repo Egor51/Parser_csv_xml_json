@@ -22,7 +22,7 @@ public abstract class Main {
 
         List<Employee> list = ParserCSV.parseCSV(columnMapping,fileNameCsv);
         String json = String.valueOf(ToJson.listToJson(list,fileNameCsvToJson));
-        List<Employee> list1 = ParserXML.parserXML(fileNameXml);
+        List<Employee> list1 = ParserXML.parseXML(fileNameXml);
         String json1 = String.valueOf(ToJson.listToJson(list1,fileNameXmltoJson));
 
 
