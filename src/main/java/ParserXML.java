@@ -26,7 +26,7 @@ public class ParserXML {
             for (int s = 0; s < nodeLst.getLength(); s++) {
                 Node fstNode = nodeLst.item(s);
                 if (fstNode.getNodeType() == Node.ELEMENT_NODE) {
-
+                    // id
                     Element fstElmnt = (Element) fstNode;
                     NodeList fstNmElmntLst = fstElmnt.getElementsByTagName("id");
                     Element fstNmElmnt = (Element) fstNmElmntLst.item(0);
@@ -34,34 +34,39 @@ public class ParserXML {
                     String ID = ((Node) fstNm.item(0)).getNodeValue();
                     System.out.println("id : " + ID);
 
-                    //
+                    //firstName
 
                     NodeList lstNmElmntLst2 = fstElmnt.getElementsByTagName("firstName");
                     Element lstNmElmnt2 = (Element) lstNmElmntLst2.item(0);
                     NodeList lstNm2 = lstNmElmnt2.getChildNodes();
                     String FirstName = ((Node) lstNm2.item(0)).getNodeValue();
                     System.out.println("firstName : " + FirstName);
-                    //
+
+                    //lastName
 
                     NodeList lstNmElmntLst3 = fstElmnt.getElementsByTagName("lastName");
                     Element lstNmElmnt3 = (Element) lstNmElmntLst3.item(0);
                     NodeList lstNm3 = lstNmElmnt3.getChildNodes();
                     String LastName = ((Node) lstNm3.item(0)).getNodeValue();
                     System.out.println("lastName : " + LastName);
-                    //
+
+                    //country
 
                     NodeList lstNmElmntLst4 = fstElmnt.getElementsByTagName("country");
                     Element lstNmElmnt4 = (Element) lstNmElmntLst4.item(0);
                     NodeList lstNm4 = lstNmElmnt4.getChildNodes();
                     String Country = ((Node) lstNm4.item(0)).getNodeValue();
                     System.out.println("country : " + Country);
-                    //
+
+                    //age
 
                     NodeList lstNmElmntLst5 = fstElmnt.getElementsByTagName("age");
                     Element lstNmElmnt5 = (Element) lstNmElmntLst5.item(0);
                     NodeList lstNm5 = lstNmElmnt5.getChildNodes();
                     String Age = ((Node) lstNm5.item(0)).getNodeValue();
                     System.out.println("age : " + Age);
+
+                    //toList
 
                     Employee employee = new Employee(Long.parseLong(ID), FirstName, LastName, Country, Integer.parseInt(Age));
                     staff.add(employee);
